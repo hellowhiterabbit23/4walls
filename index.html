@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>4WALLS | Home Services Made Simple</title>
+
+<meta name="description" content="Cleaning, aircon, plumbing, electrical and painting services — all in one place with 4WALLS.">
+
+<style>
+
+/* =========================
+   BASE
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f3ee;
+    color: #171717;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: min(1180px, 88%);
+    margin: auto;
+}
+
+/* =========================
+   NAV
+========================= */
+
+nav {
+    height: 88px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #d8d5ce;
+    background: #f5f3ee;
+}
+
+.nav-inner {
+    width: min(1180px, 88%);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 900;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    font-weight: 400;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    font-size: 14px;
+}
+
+.nav-cta {
+    background: #171717;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 100px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: calc(100vh - 88px);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1000px;
+}
+
+.eyebrow {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 115px);
+    line-height: .91;
+    letter-spacing: -6px;
+    max-width: 1100px;
+}
+
+.hero h1 span {
+    color: #ff5a36;
+}
+
+.hero-description {
+    margin-top: 38px;
+    max-width: 590px;
+    font-size: 19px;
+    color: #555;
+}
+
+.hero-buttons {
+    margin-top: 38px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.button {
+    display: inline-block;
+    padding: 16px 25px;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 14px;
+    transition: .2s ease;
+}
+
+.button-dark {
+    background: #171717;
+    color: white;
+}
+
+.button-dark:hover {
+    transform: translateY(-2px);
+}
+
+.button-outline {
+    border: 1px solid #171717;
+}
+
+.button-outline:hover {
+    background: #171717;
+    color: white;
+}
+
+.hero-watermark {
+    position: absolute;
+    right: -80px;
+    bottom: -100px;
+    font-size: 330px;
+    font-weight: 900;
+    color: rgba(0,0,0,.025);
+    line-height: 1;
+    pointer-events: none;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    background: #171717;
+    color: white;
+    padding: 120px 0;
+}
+
+.section-label {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #ff5a36;
+}
+
+.section-title {
+    font-size: clamp(40px, 5vw, 70px);
+    line-height: 1;
+    letter-spacing: -3px;
+    max-width: 750px;
+}
+
+.services-grid {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid #383838;
+}
+
+.service {
+    min-height: 290px;
+    padding: 35px 30px 35px 0;
+    border-bottom: 1px solid #383838;
+    position: relative;
+}
+
+.service:nth-child(odd) {
+    border-right: 1px solid #383838;
+    padding-right: 45px;
+}
+
+.service:nth-child(even) {
+    padding-left: 45px;
+}
+
+.service-number {
+    color: #777;
+    font-size: 13px;
+}
+
+.service h3 {
+    font-size: 36px;
+    margin-top: 45px;
+    letter-spacing: -1.5px;
+}
+
+.service p {
+    color: #aaa;
+    margin-top: 12px;
+    max-width: 420px;
+}
+
+.service-link {
+    display: inline-block;
+    margin-top: 28px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #ff5a36;
+}
+
+/* =========================
+   VALUE PROPOSITION
+========================= */
+
+.one-number {
+    padding: 150px 0;
+}
+
+.one-number-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: start;
+}
+
+.big-copy {
+    font-size: clamp(55px, 7vw, 100px);
+    line-height: .9;
+    letter-spacing: -5px;
+}
+
+.value-copy {
+    padding-top: 20px;
+}
+
+.value-copy p {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 24px;
+}
+
+/* =========================
+   HOW IT WORKS
+========================= */
+
+.how {
+    padding: 120px 0;
+    background: #dedbd3;
+}
+
+.steps {
+    margin-top: 70px;
+}
+
+.step {
+    display: grid;
+    grid-template-columns: 100px 1fr 1fr;
+    gap: 40px;
+    padding: 32px 0;
+    border-top: 1px solid #aaa69d;
+}
+
+.step-number {
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.step h3 {
+    font-size: 25px;
+}
+
+.step p {
+    color: #555;
+}
+
+/* =========================
+   WHY
+========================= */
+
+.why {
+    padding: 130px 0;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 65px;
+    gap: 1px;
+    background: #ccc8c0;
+}
+
+.reason {
+    background: #f5f3ee;
+    padding: 45px;
+    min-height: 220px;
+}
+
+.reason h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.reason p {
+    color: #666;
+}
+
+/* =========================
+   MOVE-IN
+========================= */
+
+.package {
+    background: #ff5a36;
+    padding: 130px 0;
+}
+
+.package-grid {
+    display: grid;
+    grid-template-columns: 1.3fr .7fr;
+    gap: 80px;
+}
+
+.package h2 {
+    font-size: clamp(50px, 7vw, 95px);
+    line-height: .9;
+    letter-spacing: -5px;
+}
+
+.package-services {
+    font-size: 21px;
+    line-height: 2;
+}
+
+.package .button {
+    margin-top: 25px;
+    background: #171717;
+    color: white;
+}
+
+/* =========================
+   FINAL CTA
+========================= */
+
+.final-cta {
+    padding: 160px 0;
+    background: #171717;
+    color: white;
+    text-align: center;
+}
+
+.final-cta h2 {
+    font-size: clamp(55px, 8vw, 110px);
+    line-height: .9;
+    letter-spacing: -5px;
+}
+
+.final-cta p {
+    margin: 35px auto;
+    max-width: 600px;
+    font-size: 19px;
+    color: #aaa;
+}
+
+.final-cta .button {
+    background: #ff5a36;
+    color: #171717;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #171717;
+    color: white;
+    border-top: 1px solid #333;
+    padding: 45px 0;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-small {
+    color: #777;
+    font-size: 13px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width: 800px) {
+
+    .nav-links a:not(.nav-cta) {
+        display: none;
+    }
+
+    .hero h1 {
+        letter-spacing: -3px;
+    }
+
+    .hero-watermark {
+        font-size: 190px;
+    }
+
+    .services-grid,
+    .one-number-grid,
+    .package-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service:nth-child(odd) {
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .service:nth-child(even) {
+        padding-left: 0;
+    }
+
+    .step {
+        grid-template-columns: 45px 1fr;
+    }
+
+    .step p {
+        grid-column: 2;
+    }
+
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+
+<nav>
+    <div class="nav-inner">
+
+        <a href="#" class="logo">
+            4<span>WALLS</span>
+        </a>
+
+        <div class="nav-links">
+            <a href="#services">Services</a>
+            <a href="#how">How It Works</a>
+            <a href="#why">Why Us</a>
+            <a href="#quote" class="nav-cta">Get a Quote</a>
+        </div>
+
+    </div>
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+        <div class="eyebrow">
+            HOME SERVICES. SIMPLIFIED.
+        </div>
+
+        <h1>
+            Everything your home needs.<br>
+            Within <span>4WALLS.</span>
+        </h1>
+
+        <p class="hero-description">
+            Cleaning, aircon, plumbing, electrical and painting —
+            reliable home services, all in one place.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#services" class="button button-dark">
+                EXPLORE SERVICES
+            </a>
+
+            <a href="#quote" class="button button-outline">
+                GET A QUOTE
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-watermark">4</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="services" id="services">
+
+    <div class="container">
+
+        <div class="section-label">WHAT WE DO</div>
+
+        <h2 class="section-title">
+            One home.<br>
+            Five services.
+        </h2>
+
+        <div class="services-grid">
+
+            <div class="service">
+                <div class="service-number">01</div>
+                <h3>Cleaning</h3>
+                <p>
+                    Regular cleaning, deep cleaning and
+                    move-in or move-out cleaning.
+                </p>
+                <a href="#quote" class="service-link">GET A QUOTE →</a>
+            </div>
+
+            <div class="service">
+                <div class="service-number">02</div>
+                <h3>Aircon</h3>
+                <p>
+                    Air-conditioning servicing,
+                    cleaning, troubleshooting and repairs.
+                </p>
+                <a href="#quote" class="service-link">GET A QUOTE →</a>
+            </div>
+
+            <div class="service">
+                <div class="service-number">03</div>
+                <h3>Plumbing</h3>
+                <p>
+                    Leaks, blockages, fittings,
+                    toilets and general plumbing repairs.
+                </p>
+                <a href="#quote" class="service-link">GET A QUOTE →</a>
+            </div>
+
+            <div class="service">
+                <div class="service-number">04</div>
+                <h3>Electrical</h3>
+                <p>
+                    Lighting, sockets, fans,
+                    installations and troubleshooting.
+                </p>
+                <a href="#quote" class="service-link">GET A QUOTE →</a>
+            </div>
+
+            <div class="service">
+                <div class="service-number">05</div>
+                <h3>Painting</h3>
+                <p>
+                    Interior painting, touch-ups,
+                    walls, ceilings and home refreshes.
+                </p>
+                <a href="#quote" class="service-link">GET A QUOTE →</a>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ONE NUMBER -->
+
+<section class="one-number">
+
+    <div class="container one-number-grid">
+
+        <h2 class="big-copy">
+            One home.<br>
+            One number.
+        </h2>
+
+        <div class="value-copy">
+
+            <p>
+                Finding a cleaner shouldn't mean finding one company,
+                then another for your aircon, another plumber when
+                something leaks and another electrician when
+                something stops working.
+            </p>
+
+            <p>
+                <strong>4WALLS brings essential home services together.</strong>
+            </p>
+
+            <p>
+                Tell us what you need. We'll handle the rest.
+            </p>
+
+            <a href="#quote" class="button button-dark">
+                GET A QUOTE
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+
+<section class="how" id="how">
+
+    <div class="container">
+
+        <div class="section-label">HOW IT WORKS</div>
+
+        <h2 class="section-title">
+            Getting it sorted shouldn't be complicated.
+        </h2>
+
+        <div class="steps">
+
+            <div class="step">
+                <div class="step-number">01</div>
+                <h3>Choose your service</h3>
+                <p>Tell us what you need help with.</p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">02</div>
+                <h3>Send us the details</h3>
+                <p>
+                    Message us on WhatsApp and send photos
+                    or videos where relevant.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">03</div>
+                <h3>Get your quote</h3>
+                <p>
+                    We'll assess the job and confirm pricing
+                    before work begins.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">04</div>
+                <h3>Choose your time</h3>
+                <p>
+                    Arrange an available appointment that works for you.
+                </p>
+            </div>
+
+            <div class="step">
+                <div class="step-number">05</div>
+                <h3>Consider it handled</h3>
+                <p>
+                    The appropriate 4WALLS service team comes to you.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY -->
+
+<section class="why" id="why">
+
+    <div class="container">
+
+        <div class="section-label">WHY 4WALLS</div>
+
+        <h2 class="section-title">
+            Less searching.<br>
+            More solving.
+        </h2>
+
+        <div class="why-grid">
+
+            <div class="reason">
+                <h3>One point of contact.</h3>
+                <p>
+                    Multiple home services managed through one place.
+                </p>
+            </div>
+
+            <div class="reason">
+                <h3>Reliable service teams.</h3>
+                <p>
+                    The right people for the right job.
+                </p>
+            </div>
+
+            <div class="reason">
+                <h3>Quote before work.</h3>
+                <p>
+                    We assess the job and communicate pricing before work begins.
+                </p>
+            </div>
+
+            <div class="reason">
+                <h3>WhatsApp convenience.</h3>
+                <p>
+                    Enquire, send photos, receive your quote and arrange your appointment.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PACKAGE -->
+
+<section class="package">
+
+    <div class="container package-grid">
+
+        <div>
+            <div class="section-label" style="color:#171717;">
+                MOVING HOME?
+            </div>
+
+            <h2>
+                We'll handle<br>
+                the house.
+            </h2>
+        </div>
+
+        <div class="package-services">
+
+            Painting<br>
+            Deep cleaning<br>
+            Aircon servicing<br>
+            Electrical work<br>
+            Minor plumbing
+
+            <br>
+
+            <a href="#quote" class="button">
+                REQUEST A QUOTE
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL CTA -->
+
+<section class="final-cta" id="quote">
+
+    <div class="container">
+
+        <h2>
+            Something needs<br>
+            fixing?
+        </h2>
+
+        <p>
+            Don't search for five different contractors.
+            Tell 4WALLS what you need and we'll help you get it sorted.
+        </p>
+
+        <!-- Replace # with WhatsApp link before launch -->
+        <a href="#" class="button">
+            WHATSAPP 4WALLS →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="container footer-inner">
+
+        <div class="logo">
+            4<span>WALLS</span>
+        </div>
+
+        <div class="footer-small">
+            Cleaning · Aircon · Plumbing · Electrical · Painting
+        </div>
+
+        <div class="footer-small">
+            © 2026 4WALLS
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
