@@ -132,6 +132,36 @@ nav {
     font-size: 14px;
     color: #777;
 }
+
+   .trust-strip {
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+    background: #f8f8f6;
+}
+
+.trust-strip-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    padding: 20px 0;
+}
+
+.trust-strip-inner span {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #555;
+}
+
+@media (max-width: 600px) {
+    .trust-strip-inner {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+}
+   
 .hero-buttons {
     margin-top: 38px;
     display: flex;
@@ -549,6 +579,13 @@ footer {
 
 </section>
 
+   <div class="trust-strip">
+    <div class="container trust-strip-inner">
+        <span>RELIABLE SERVICE TEAMS</span>
+        <span>UPFRONT QUOTES</span>
+        <span>WHATSAPP SUPPORT</span>
+    </div>
+</div>
 
 <!-- SERVICES -->
 
